@@ -1,3 +1,7 @@
+{% load static %}
+{% extends 'base.html' %}
+{% block 'content' %}
+
 <form method="post">
     {% csrf_token %}
     {{form.as_p}}
@@ -9,3 +13,5 @@
     {% endif %}
 </form>
 <p><a href={% url 'password_reset' %}>kheili khengi ke passwordet yadet rafte</a></p>
+
+{% endblock 'content' %}
